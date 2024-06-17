@@ -54,7 +54,7 @@ public class OrderRepository : IOrderRepository
                 TotalPrice = g.Sum(ol => ol.Price * ol.Quantity)
             })
             .OrderByDescending(g => g.TotalQuantity)
-            .ToList();
+            .ToList()[.. 5];
 
         return groupedOrderLines;
         //
@@ -82,7 +82,7 @@ public class OrderRepository : IOrderRepository
 
             foreach (var orderLine in orderBase.OrderLines)
             {
-                var id = (Random.Shared.Next(1, 1000) % 4) + 1; // limiting productIds to be in the range 1 - 4
+                var id = (Random.Shared.Next(1, 1000) % 10) + 1; // limiting productIds to be in the range 1 - 10
                 orderLine.ProductId = $"{id}";
                 orderLine.ProductName = $"name{id}";
             }

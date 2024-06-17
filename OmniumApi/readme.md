@@ -19,7 +19,7 @@ to use sqllite and entityframework
 Decided to make the `CalculateOrderTotal` to be a private method on the abstract class to be called, so that the order
 Total is never out of sync
 
-When testing the API, the order ids will be in the range 1 - 20, customersIds 1 - 10, productIds 1 - 4
+When testing the API, the order ids will be in the range 1 - 20, customersIds 1 - 10, productIds 1 - 10
 
 Ulrik Bakken Singsaas
 
