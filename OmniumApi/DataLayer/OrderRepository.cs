@@ -3,15 +3,6 @@ using OmniumApi.Models;
 
 namespace OmniumApi.DataLayer;
 
-public interface IOrderRepository
-{
-    Task<IEnumerable<OrderBase>> GetOrders();
-    Task<OrderBase?> GetOrder(string orderId);
-    Task<IEnumerable<OrderBase>> GetOrdersByCustomerId(string customerId);
-    Task<IEnumerable<OrderBase>> GetOrdersByProductId(string productId);
-    Task<List<GroupedOrderLine>> GetTopSellingProducts();
-}
-
 public class OrderRepository : IOrderRepository
 {
     private readonly List<OrderBase> _orders = InitializeFakeOrders();
@@ -57,9 +48,6 @@ public class OrderRepository : IOrderRepository
             .ToList()[.. 5];
 
         return groupedOrderLines;
-        //
-        // var stuff = orderLines
-        //     .GroupBy(lines => lines.ProductId, lines => lines.Quantity, (productId, quantity, price) => new {ProductId = productId, Quantity = quantity.Sum()});
     }
 
     private static List<OrderBase> InitializeFakeOrders()
@@ -86,7 +74,6 @@ public class OrderRepository : IOrderRepository
                 orderLine.ProductId = $"{id}";
                 orderLine.ProductName = $"name{id}";
             }
-
 
             orders.Add(orderBase);
         }

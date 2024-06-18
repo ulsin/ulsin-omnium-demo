@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmniumApi", "OmniumApi\OmniumApi.csproj", "{E74644A9-7CFB-48E5-94F3-83C3F293A49A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{0769ACD8-4638-4A6E-B386-E70A5EDB1B99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{E74644A9-7CFB-48E5-94F3-83C3F293A49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E74644A9-7CFB-48E5-94F3-83C3F293A49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E74644A9-7CFB-48E5-94F3-83C3F293A49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0769ACD8-4638-4A6E-B386-E70A5EDB1B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0769ACD8-4638-4A6E-B386-E70A5EDB1B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0769ACD8-4638-4A6E-B386-E70A5EDB1B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0769ACD8-4638-4A6E-B386-E70A5EDB1B99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

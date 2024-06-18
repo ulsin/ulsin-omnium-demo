@@ -1,25 +1,34 @@
-﻿## TODO
-
-- Add webapplication tests
-- Add sqllite with entityframework core
-
-## Intro and choice
+﻿## Intro and choices
 
 This is my delivery as per the instructions of the email, which I have pasted below.
 
-I decided to do this as a web api before I saw that you wanted PosOrdrer as well and to use abstract classes,
+When testing the API, the order ids will be in the range 1 - 20, customersIds 1 - 10, productIds 1 - 10
+
+I decided to do this as a web api before I saw that you wanted PosOrder as well and to use abstract classes,
 so I just made the api polymorphic, as you can do as per .NET 7
 
-Was considering using a minimal API instead of conventional controllers, but i decided that conventional controllers is
-the most common one so tought it was the most valuable competency to display
+Was considering using a minimal API instead of conventional controllers, but I decided that conventional controllers is
+the most common one so thought it was the most valuable competency to display
 
-Started with just using autofixture to generate the data as per normal testing conventions, however might decide later
-to use sqllite and entityframework
+Started with just using AutoFixture to generate the data as per normal testing conventions. I thought about using
+SqlLite and EntityFramework, but as the task is fine with mocking and EntityFramework not really showing Data Modeling
+nor SQL competency, then I decided not to spend time on that
 
 Decided to make the `CalculateOrderTotal` to be a private method on the abstract class to be called, so that the order
 Total is never out of sync
 
-When testing the API, the order ids will be in the range 1 - 20, customersIds 1 - 10, productIds 1 - 10
+Also added a test project with `WebApplicationFactory` tests to display competency of how to get test coverage even
+of the controller whilst having the code being run as unit tests that are getting
+
+I didn't bulletproof the tests as much as I could have, but it was more as a proof of concept, as I've seen not many
+know of the `WebApplicationFactory` feature, and I did achieve 100% test coverage (at least per the `dotCover` plugin),
+which felt nice.
+
+Also, could have used primary constructors but decided not to, as they can seem strange to some, and hides use of
+conventional private readonly fields.
+
+Also, I wrote this readme in english, as when I am coding I often hop into the language gear, but I have no issues
+writing and reading code and documentation in both english and norwegian
 
 Ulrik Bakken Singsaas
 
@@ -48,5 +57,5 @@ Ulrik Bakken Singsaas
   egenskapene som Order, men har i tillegg egenskapen "PosId". Skriv om metodene slik at de også kan benytte av typen
   PosOrder.
 
-- [ ] **GetTopSellingProducts** - Lag en metode som returnerer de 5 mest solgte produktene, inkludert salgsinntekter per
+- [x] **GetTopSellingProducts** - Lag en metode som returnerer de 5 mest solgte produktene, inkludert salgsinntekter per
   produkt. Velg selv om metoden skal returnere en ny klasse du definerer, en dictionary, value tuple eller lignende.

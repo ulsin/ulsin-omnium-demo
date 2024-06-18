@@ -10,8 +10,19 @@
 
     <ItemGroup>
         <PackageReference Include="AutoFixture" Version="4.18.1"/>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0-preview.6.23329.11"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="Tests"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="..\readme.md">
+            <Link>readme.md</Link>
+        </Content>
+    </ItemGroup>
+
 
 </Project>

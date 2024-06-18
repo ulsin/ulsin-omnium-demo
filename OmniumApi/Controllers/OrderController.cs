@@ -42,7 +42,7 @@ public class OrderController : ControllerBase
     }
 
     [HttpGet(Name = "GetTopSellingProducts")]
-    public async Task<ActionResult<IEnumerable<OrderBase>>> GetTopSellingProducts()
+    public async Task<ActionResult<IEnumerable<GroupedOrderLine>>> GetTopSellingProducts()
     {
         return Ok(await _orderRepository.GetTopSellingProducts());
     }
