@@ -2,7 +2,7 @@
 
 This is my delivery as per the instructions of the email, which I have pasted below.
 
-When testing the API, the order ids will be in the range 1 - 20, customersIds 1 - 10, productIds 1 - 10
+When testing the API, the orderIds will be in the range `1 - 20`, customersIds `1 - 10`, productIds `1 - 10`
 
 I decided to do this as a web api before I saw that you wanted PosOrder as well and to use abstract classes,
 so I just made the api polymorphic, as you can do as per .NET 7
@@ -18,17 +18,19 @@ Decided to make the `CalculateOrderTotal` to be a private method on the abstract
 Total is never out of sync
 
 Also added a test project with `WebApplicationFactory` tests to display competency of how to get test coverage even
-of the controller whilst having the code being run as unit tests that are getting
+of the controller whilst having the code being run as unit tests that can be included in normal CI/CD test runs
 
 I didn't bulletproof the tests as much as I could have, but it was more as a proof of concept, as I've seen not many
-know of the `WebApplicationFactory` feature, and I did achieve 100% test coverage (at least per the `dotCover` plugin),
-which felt nice.
+know of the `WebApplicationFactory` feature. However, I did achieve 100% test coverage (at least per the
+JetBrains `dotCover` plugin), which felt nice.
 
-Also, could have used primary constructors but decided not to, as they can seem strange to some, and hides use of
+I could have used primary constructors but decided not to, as they can seem strange to some, and hides use of
 conventional private readonly fields.
 
 Also, I wrote this readme in english, as when I am coding I often hop into the language gear, but I have no issues
 writing and reading code and documentation in both english and norwegian
+
+Hope I answered the task in satisfactory manner,
 
 Ulrik Bakken Singsaas
 
